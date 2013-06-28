@@ -1,4 +1,4 @@
 slim
 ====
 
-slim javascript lib
+my handy javascript lib
