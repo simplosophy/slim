@@ -10,7 +10,7 @@ my handy javascript lib, which may help writing single-line code.  **warning Arr
 ## 1.sLog
 log the object to console, eg.
 
-```
+```javascript
 [1,2,{a:1}].sLog();
 ```
 ## 2.sDumps
@@ -18,14 +18,14 @@ if in node.js, serialize the invoking object string to file,
 otherwise, dumps string to console.
 eg.
 
-```
+```javascript
 [1,2,3].sDumps('a.json');//a 'a.json' file would be created in node.js
 ```
 ## 3.sLoads
 **node.js only**, load js object from file.
 eg.
 
-```
+```javascript
 Object.sLoads('a.json');
 ```
 
@@ -33,7 +33,7 @@ Object.sLoads('a.json');
 ##1. sFilter
 filtering an array for given condition(Lambda string or Funtion object),eg.
 
-```
+```javascript
 [1,2,3].sFilter('$>1&&$<3');//result is [2]
 [{a:1},{a:2},{a:3}].sFilter('$.a>1');//result is [{a:2},{a:3}]
 [1,2,3].sFilter(function(e){return e>1});//result is [2,3]
@@ -41,7 +41,7 @@ filtering an array for given condition(Lambda string or Funtion object),eg.
 ##2. sMap
 do something with each element of the array, and return a new one(Lambda string or Funtion object),eg.
 
-```
+```javascript
 [1,2,{a:1}].sMap('$,i=>{"index":i,"value":$}');//result is :
 	[ { index: 0, value: 1 },
 	  { index: 1, value: 2 },
@@ -51,6 +51,6 @@ do something with each element of the array, and return a new one(Lambda string 
 ##2. sReduce
 reduce an array, and return one object(Lambda string or Funtion object),eg.
 
-```
+```javascript
 [1,2,3].sReduce('a,b=>a+b'); //result is : 6
 ```
