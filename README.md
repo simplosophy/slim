@@ -35,8 +35,7 @@ Object.sLoads('a.json');
 ##1. sFilter
 filtering an array for given condition(Lambda string or Funtion object),eg.
 
-```
-javascript
+```javascript
 [1,2,3].sFilter('$>1&&$<3');//result is [2]
 [{a:1},{a:2},{a:3}].sFilter('$.a>1');//result is [{a:2},{a:3}]
 [1,2,3].sFilter(function(e){return e>1});//result is [2,3]
@@ -50,7 +49,6 @@ do something with each element of the array, and return a new one(Lambda string 
 	  { index: 1, value: 2 },
 	  { index: 2, value: { a: 1 } } ]
 [1,2,3].sMap('$*2');//result is [2,4,6]
-
 ```
 ##3. sReduce
 reduce an array, and return one object(Lambda string or Funtion object),eg.
