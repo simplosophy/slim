@@ -67,3 +67,10 @@ sort an array, and returns sorted array, eg.
   { i: 1, v: 2 },
   { i: 0, v: 1 } ]
 ```
+##3. sBranch
+branch each element of an array, and return a new array(Lambda string or Funtion object),eg.
+
+```javascript
+[1,2,3,4].sMap('$,i=>{"i":i,"v":$}').sSort('a,b=>b.v-a.v').sLog() //result is :
+[ { i: 3, v: 4 }, { i: 2, v: 3 }, { i: 1, v: 2 }, { i: 0, v: 1 } ]
+```
