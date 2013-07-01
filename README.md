@@ -3,7 +3,7 @@ slim
 
 my handy javascript lib, which may help writing "chain" statement. you'll find it useful when dealing with some statistics issues.
 
-**warning Array and Object's namespace would be polluted (slim.js members' name start with `s` followed by an upper case character, eg. 'sFilter' ).**
+**warning Array and Object's namespace would be polluted (slim.js members' name start with `s` followed by an upper case character, eg. 'Array.sFilter' ).**
 *****************************
 ***KEEP AN ARRAY IN YOUR MIND***
 *****************************
@@ -61,7 +61,8 @@ sort an array, and returns sorted array, eg.
 
 ```javascript
 [1,2,3,4].sMap('$,i=>{"i":i,"v":$}').sSort('a,b=>b.v-a.v') 
-//result is : [ { i: 3, v: 4 },
+//result is : 
+[ { i: 3, v: 4 },
   { i: 2, v: 3 },
   { i: 1, v: 2 },
   { i: 0, v: 1 } ]
